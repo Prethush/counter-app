@@ -40,7 +40,7 @@ function App() {
       }
       }>Increment</button>
       <button className="text-xl bg-blue-500 text-white font-bold py-2 px-2 sm:px-4 rounded-md mx-2" onClick={() => setCounter(counter - step)}>Decrement</button>
-      <button className="text-xl bg-blue-500 text-white font-bold py-2 px-2 sm:px-4 rounded-md mx-2" onClick={() => setCounter(0)}>Rest</button>
+      <button className="text-xl bg-blue-500 text-white font-bold py-2 px-2 sm:px-4 rounded-md mx-2" onClick={() => setCounter(0)}>Reset</button>
     </div>
   </main>
 }
