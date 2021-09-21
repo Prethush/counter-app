@@ -17,4 +17,4 @@ npm start
 ````
 ## Deployment
 
-https://blog-counter-kt.netlify.app/
+https://counter-kt.netlify.app/
