@@ -7,7 +7,8 @@ function App() {
   let [max, setMax] = useState(Infinity);
 
   useEffect(() => {
-    setCounter(counter = counter > max ? max : counter);
+    let newCounter = counter > max ? max : counter;
+    setCounter(newCounter);
   }, [max])
 
   return <main className="py-12 px-8 sm:p-12">
@@ -25,7 +26,7 @@ function App() {
       <div className="flex flex-col items-center mx-12">
         <h4 className="text-2xl font-bold my-4">Max</h4>
         <div className="flex">
-          <button className={max === 15 ? "text-xl bg-red-500 text-white font-bold py-2 px-4 rounded-md mx-2" : "text-xl bg-green-500 text-white font-bold py-2 px-4 rounded-md mx-2"} onClick={() => setMax(15)}>15</button>
+          <button className={max === 15 ? "text-xl bg-red-500 text-white font-bold py-2 px-4 rounded-md mx-2" : "text-xl bg-green-500 text-white font-bold py-2 px-4 rounded-md mx-2"} onClick={() =>{ setMax(15) }}>15</button>
           <button className={max === 100 ? "text-xl bg-red-500 text-white font-bold py-2 px-4 rounded-md mx-2" : "text-xl bg-green-500 text-white font-bold py-2 px-4 rounded-md mx-2"} onClick={() => setMax(100)}>100</button>
           <button className={max === 200 ? "text-xl bg-red-500 text-white font-bold py-2 px-4 rounded-md mx-2" : "text-xl bg-green-500 text-white font-bold py-2 px-4 rounded-md mx-2"} onClick={() => setMax(200)}>200</button>
         </div>
