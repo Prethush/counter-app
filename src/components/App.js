@@ -9,13 +9,17 @@ function App() {
   useEffect(() => {
     let newCounter = counter > max ? max : counter;
     setCounter(newCounter);
-  }, [max])
+  }, [max, counter])
 
   return <main className="py-12 px-8 sm:p-12">
     <h1 className="text-center text-5xl font-bold text-blue-900 mt-8">Counter App</h1>
+    
+    {/* Counter */}
     <h2 className="text-3xl font-bold text-center mt-8 mb-6">{counter}</h2>
     <div className="mb-6 flex flex-col sm:flex-row sm:justify-center">
       <div className="flex flex-col items-center mx-12">
+
+        {/* Steps */}
         <h4 className="text-2xl font-bold my-4">Steps</h4>
         <div className="flex">
           <button className={step === 5 ? "text-xl bg-red-500 text-white font-bold py-2 px-4 rounded-md mx-2" : "text-xl bg-green-500 text-white font-bold py-2 px-4 rounded-md mx-2"} onClick={() => setStep(5)}>5</button>
@@ -23,6 +27,8 @@ function App() {
           <button className={step === 15 ? "text-xl bg-red-500 text-white font-bold py-2 px-4 rounded-md mx-2" : "text-xl bg-green-500 text-white font-bold py-2 px-4 rounded-md mx-2"} onClick={() => setStep(15)}>15</button>
         </div>
       </div>
+
+      {/* Max Limit Part */}
       <div className="flex flex-col items-center mx-12">
         <h4 className="text-2xl font-bold my-4">Max</h4>
         <div className="flex">
@@ -32,6 +38,8 @@ function App() {
         </div>
       </div>
     </div>
+
+    {/* Increment/Decrement/Reset */}
     <div className="flex justify-center">
       <button className="text-xl bg-blue-500 text-white font-bold py-2 px-2 sm:px-4 rounded-md mx-2" onClick={() => {
         if (counter + step > max) {
