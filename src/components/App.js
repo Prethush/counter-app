@@ -22,9 +22,9 @@ function App() {
         {/* Steps */}
         <h4 className="text-2xl font-bold my-4">Steps</h4>
         <div className="flex">
-          <button className={step === 5 ? "text-xl bg-red-500 text-white font-bold py-2 px-4 rounded-md mx-2" : "text-xl bg-green-500 text-white font-bold py-2 px-4 rounded-md mx-2"} onClick={() => setStep(5)}>5</button>
-          <button className={step === 10 ? "text-xl bg-red-500 text-white font-bold py-2 px-4 rounded-md mx-2" : "text-xl bg-green-500 text-white font-bold py-2 px-4 rounded-md mx-2"} onClick={() => setStep(10)}>10</button>
-          <button className={step === 15 ? "text-xl bg-red-500 text-white font-bold py-2 px-4 rounded-md mx-2" : "text-xl bg-green-500 text-white font-bold py-2 px-4 rounded-md mx-2"} onClick={() => setStep(15)}>15</button>
+          <button className={"text-xl text-white font-bold py-2 px-4 rounded-md mx-2" + (step === 5 ? " bg-red-500" : " bg-green-500")} onClick={() => setStep(5)}>5</button>
+          <button className={"text-xl text-white font-bold py-2 px-4 rounded-md mx-2" + (step === 10 ? " bg-red-500" : " bg-green-500")} onClick={() => setStep(10)}>10</button>
+          <button className={"text-xl text-white font-bold py-2 px-4 rounded-md mx-2" + (step === 15 ? " bg-red-500" : " bg-green-500")} onClick={() => setStep(15)}>15</button>
         </div>
       </div>
 
@@ -32,9 +32,9 @@ function App() {
       <div className="flex flex-col items-center mx-12">
         <h4 className="text-2xl font-bold my-4">Max</h4>
         <div className="flex">
-          <button className={max === 15 ? "text-xl bg-red-500 text-white font-bold py-2 px-4 rounded-md mx-2" : "text-xl bg-green-500 text-white font-bold py-2 px-4 rounded-md mx-2"} onClick={() =>{ setMax(15) }}>15</button>
-          <button className={max === 100 ? "text-xl bg-red-500 text-white font-bold py-2 px-4 rounded-md mx-2" : "text-xl bg-green-500 text-white font-bold py-2 px-4 rounded-md mx-2"} onClick={() => setMax(100)}>100</button>
-          <button className={max === 200 ? "text-xl bg-red-500 text-white font-bold py-2 px-4 rounded-md mx-2" : "text-xl bg-green-500 text-white font-bold py-2 px-4 rounded-md mx-2"} onClick={() => setMax(200)}>200</button>
+          <button className={"text-xl text-white font-bold py-2 px-4 rounded-md mx-2" + (max === 15 ? " bg-red-500" : " bg-green-500")} onClick={() =>{ setMax(15) }}>15</button>
+          <button className={"text-xl text-white font-bold py-2 px-4 rounded-md mx-2" + (max === 100 ? " bg-red-500" : " bg-green-500")} onClick={() => setMax(100)}>100</button>
+          <button className={"text-xl text-white font-bold py-2 px-4 rounded-md mx-2" + (max === 200 ? " bg-red-500" : " bg-green-500")} onClick={() => setMax(200)}>200</button>
         </div>
       </div>
     </div>
